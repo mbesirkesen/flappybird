@@ -1,59 +1,84 @@
-# Flappy Bird Oyunu
+# Flappy Bird
 
-C# Windows Forms ile geliştirilmiş Flappy Bird oyunu.
+C# Windows Forms ile geliştirilmiş klasik Flappy Bird oyunu.
 
-## 🎮 Oyun Hakkında
+[![.NET Framework](https://img.shields.io/badge/.NET%20Framework-4.6.1-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
+[![C#](https://img.shields.io/badge/C%23-Windows%20Forms-239120?logo=csharp)](https://docs.microsoft.com/dotnet/csharp/)
 
-Klasik Flappy Bird oyununun Windows Forms uygulaması. Oyuncu kuşu kontrol ederek engelleri aşmaya çalışır.
+## Oyun Hakkında
 
-## ✨ Özellikler
+Kuşu kontrol ederek borulardan geçmeye çalıştığınız klasik Flappy Bird deneyimi. Skor arttıkça oyun hızlanır ve zorluk seviyesi yükselir.
+
+## Önizleme
+
+| Kuş | Boru | Zemin |
+|:---:|:----:|:-----:|
+| ![Kuş](Resources/bird.png) | ![Boru](Resources/pipe.png) | ![Zemin](Resources/ground.png) |
+
+## Özellikler
 
 - Basit ve akıcı oynanış
 - Skor takibi
-- Zorluk seviyesi artışı (skor arttıkça oyun hızlanır)
+- Skora bağlı zorluk artışı (hız 8 → 11 → 15 → 20)
 - DevExpress bileşenleri ile modern arayüz
 
-## 🛠️ Teknolojiler
+## Teknolojiler
 
 - **C#** (.NET Framework 4.6.1)
 - **Windows Forms**
 - **DevExpress v18.1**
 
-## 📋 Gereksinimler
+## Gereksinimler
 
+- Windows işletim sistemi
 - Visual Studio 2017 veya üzeri
 - .NET Framework 4.6.1 veya üzeri
-- DevExpress v18.1 bileşenleri
+- [DevExpress v18.1](https://www.devexpress.com/) bileşenleri (ücretli lisans gerektirir)
 
-## 🚀 Kurulum
+> **Not:** DevExpress ticari bir kütüphanedir. Projeyi derlemek için makinenizde DevExpress v18.1 kurulu olmalıdır. GitHub Actions üzerinde otomatik derleme bu nedenle yapılandırılmamıştır.
 
-1. Projeyi klonlayın:
+## Kurulum
+
 ```bash
-git clone https://github.com/kullaniciadi/flappybird.git
+git clone https://github.com/mbesirkesen/flappybird.git
+cd flappybird
 ```
 
-2. Visual Studio'da `flappybird.csproj` dosyasını açın
+1. Visual Studio'da `flappybird.sln` dosyasını açın
+2. DevExpress bileşenlerinin yüklü olduğundan emin olun
+3. **Build → Build Solution** ile derleyin
+4. **Debug → Start Debugging** (F5) ile çalıştırın
 
-3. DevExpress bileşenlerinin yüklü olduğundan emin olun
+## Oynanış
 
-4. Projeyi derleyin ve çalıştırın
+- **Boşluk tuşu** — Kuşu yukarı hareket ettirir (basılı tutulduğunda süzülür)
+- Borulardan geçerek skorunuzu artırın
+- Borulara, zemine veya ekran üst sınırına çarpmayın
 
-## 🎯 Oynanış
+## Proje Yapısı
 
-- Oyunu başlatmak için bir tuşa basın
-- Kuşu yukarı hareket ettirmek için boşluk tuşuna veya ekrana tıklayın
-- Engelleri aşarak skorunuzu artırın
-- Engellere çarpmamaya dikkat edin!
+```
+flappybird/
+├── Form1.cs              # Ana oyun mantığı (flippybird formu)
+├── Form1.Designer.cs     # Form tasarımı
+├── Program.cs            # Uygulama giriş noktası
+├── Resources/            # Oyun görselleri (kuş, boru, zemin)
+├── Properties/           # Proje kaynakları ve ayarları
+├── docs/                 # Dokümantasyon
+│   └── oyun-akis-semasi.jpeg
+├── flappybird.sln
+└── flappybird.csproj
+```
 
-## 📝 Notlar
+Oyun akış şeması: [docs/oyun-akis-semasi.jpeg](docs/oyun-akis-semasi.jpeg)
 
-- Oyun akış şeması `WhatsApp Image 2024-10-21 at 19.01.08.jpeg` dosyasında bulunmaktadır
-- Proje geliştirme aşamasındadır
+## Katkıda Bulunma
 
-## 👤 Geliştirici
+1. Bu repoyu fork edin
+2. Yeni bir branch oluşturun (`git checkout -b ozellik/yeni-ozellik`)
+3. Değişikliklerinizi commit edin
+4. Branch'inizi push edin ve Pull Request açın
 
-Muhammed Beşir Kesen
+## Geliştirici
 
-## 📄 Lisans
-
-Bu proje eğitim amaçlı geliştirilmiştir.
+**Muhammed Beşir Kesen**
